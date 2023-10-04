@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Search</title>
+    <style>
+        body{
+            display: grid;
+            font-size: 20px; 
+        }
+        .container{
+            display: grid;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .header{
+            padding-top: 20px;
+            margin-left: 30px;
+        }
+        table,
+        th {
+            border: 2px solid black;
+        }
+        tr,td {
+            border: 1px solid gray;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th,
+        td {
+            padding: 15px;
+        }
+        td{
+            padding: 55px;
+        }
+        .labelFrom{
+            margin-bottom: 10px;
+        }
+        .button{
+            margin-left: 10px;
+            padding: 10px;
+        }
+        .topicAftersearch{
+            margin-bottom: 10px;
+        }
+        #selectAge, #selectGender{
+            width: 45%;
+            padding-block: 10px
+        }
+        #selectGender{
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Search Toy</h1>
+        </div>
+        <div class="labelFrom">
+            <span>Select Age</span>
+            <span>Select Gender</span>
+        </div>
+        <div class="form">
+            <select name="selectAge" id="selectAge">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
+            <select name="selectGender" id="selectGender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Neutral">Neutral</option>
+            </select>
+            <button class="button">Search</button>
+        </div>
+        <br />
+        <div class="result">
+            <div class="topicAftersearch">X toys found</div>
+            <div>
+                <table>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
