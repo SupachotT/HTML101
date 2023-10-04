@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <style>
+        body {
+            display: grid;
+            font-family: sans-serif;
+            font-size: 20px;
+        }
+        .container {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .header {
+            padding-top: 20px;
+            margin-left: 15px;
+        }
+        .form {
+            display: flex;
+        }
+        table, th, tr, td {
+            border: 1.5px solid black;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            padding: 15px;
+        }
+        .table_data_2{
+            width: 15%;
+        }
+        .table_data_3{
+            text-align: right;
+            width: 20%;
+        }
+        #Items{
+            text-align: left;
+        }
+        #Quantity{
+            text-align: center;
+        }
+        #Price{
+            text-align: right;
+        }
+        #gender_and_age, .in_or_out_of_stock, .summary{
+            display: flex;
+        }
+        #age{
+            margin-left: 50px;
+        }
+        .in_stock, .out_of_stock{
+            color: red;
+        }
+        .in_stock{
+            margin-right: 10px;
+        }
+        .out_of_stock{
+            margin-left: 10px;   
+        }
+        .delete{
+            color: blue;
+        }
+        #quantity{
+            width: 45%;
+        }
+        .dropdown_quantity{
+            text-align: center;
+        }
+        button{
+            margin-top: 30px;
+            background-color: white;
+            border-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Shopping Cart</h1>
+        </div>
+        <div class="form">
+            <table>
+                <tr>
+                    <th id="Items">Items</th>
+                    <th id="Quantity">Quantity</th>
+                    <th id="Price">Price (THB)</th>
+                </tr>
+                <tr>
+                    <td class="table_data_1">
+                        <div class="details_item">
+                            <div><b>Toy Name</b> by Brand</div><br>
+                            <div id="gender_and_age">
+                                <div id="gender">Gender</div>
+                                <div id="age">Age</div>
+                            </div><br>
+                            <div class="in_or_out_of_stock">
+                                <div class="in_stock"><b>In Stock</b></div>
+                                <div>/</div>
+                                <div class="out_of_stock"><b>Out of Stock</b></div><br>
+                            </div><br>
+                            <div class="delete">Delete</div>
+                        </div>
+                    </td>
+                    <td class="table_data_2">
+                        <div class="dropdown_quantity">
+                            <select name="quantity" id="quantity">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td class="table_data_3">100.00</td>
+                </tr>
+                <tr>
+                    <td class="table_data_1">
+                        <div class="details_item">
+                            <div><b>Toy Name</b> by Brand</div><br>
+                            <div id="gender_and_age">
+                                <div id="gender">Gender</div>
+                                <div id="age">Age</div>
+                            </div><br>
+                            <div class="in_or_out_of_stock">
+                                <div class="in_stock"><b>In Stock</b></div>
+                                <div>/</div>
+                                <div class="out_of_stock"><b>Out of Stock</b></div><br>
+                            </div><br>
+                            <div class="delete">Delete</div>
+                        </div>
+                    </td>
+                    <td class="table_data_2">
+                        <div class="dropdown_quantity">
+                            <select name="quantity" id="quantity">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td class="table_data_3">100.00</td>
+                </tr>
+            </table>
+        </div><br>
+
+        <div class="summary" style="justify-content: space-between;">
+            <div>
+                <div class="shipping_method" style="padding-bottom: 10px;">Shipping Method: Kerry Express</div>
+                <div class="shipping_fee">Shipping fee: 150.00 THB</div>
+            </div>
+            <div>
+                <div style="display: flex; justify-content: flex-end; margin-bottom: 10px;">
+                    <div class="subtotal" style="margin-right: 10px;"><b>Subtotal (2 Items):</b></div>
+                    <div>
+                        <div style="display: flex;">
+                            <div style="color: red;"><b>200.00</b></div>
+                            <div style="margin-left: 5px;"><b>THB</b></div>
+                        </div>
+                    </div>
+                </div>
+                <div style="display: flex; justify-content: flex-end;">
+                    <div class="shipping_fee" style="margin-right: 10px;"><b>Shipping fee:</b></div>
+                    <div>
+                        <div style="display: flex;">
+                            <div style="color: red;"><b>150.00</b></div>
+                            <div style="margin-left: 5px;"><b>THB</b></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button>Process to check out</button>
+    </div>
+</body>
+
+</html>
