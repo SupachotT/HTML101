@@ -8,6 +8,7 @@
     <style>
         body{
             display: grid;
+            font-family: sans-serif;
             font-size: 20px; 
         }
         .container{
@@ -16,7 +17,7 @@
         }
         .header{
             padding-top: 20px;
-            margin-left: 30px;
+            margin-left: 15px;
         }
         .form, .labelFrom{
             display: flex;
@@ -38,25 +39,27 @@
         td{
             padding: 55px;
         }
-        .labelFrom{
-            margin-bottom: 10px;
-        }
         .button{
-            margin-left: 10px;
-            padding: 10px;
+            margin-left: 15px;
+            margin-top: 42px;
+            padding-block: 10px;
         }
         .topicAftersearch{
             margin-bottom: 10px;
         }
-        #selectAge, #selectGender{
+        .form_select_age, .form_select_gender{
             width: 50%;
             padding-block: 10px
         }
-        #selectGender{
+        .form_select_gender{
             margin-left: 10px;
         }
-        #genderLabel{
-            margin-left: 710px;
+        #selectAge, #selectGender{
+            width: 100%;
+            padding-block: 10px
+        }
+        #ageLabel, #genderLabel{
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -66,25 +69,29 @@
         <div class="header">
             <h1>Search Toy</h1>
         </div>
-        <div class="labelFrom">
-            <span id="ageLabel">Select Age</span>
-            <span id="genderLabel">Select Gender</span>
-        </div>
         <div class="form">
-            <select name="selectAge" id="selectAge">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-            </select>
-            <select name="selectGender" id="selectGender">
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-                <option value="Neutral">Neutral</option>
-            </select>
-            <button class="button">Search</button>
+            <div class="form_select_age">
+                <div id="ageLabel">Select Age</div>
+                <select name="selectAge" id="selectAge">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+            </div>
+            <div class="form_select_gender">
+                <div id="genderLabel">Select Gender</div>
+                <select name="selectGender" id="selectGender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Neutral">Neutral</option>
+                </select>
+            </div>
+            <div class="but">
+                <button class="button">Search</button>
+            </div>
         </div>
         <br />
         <div class="result">
