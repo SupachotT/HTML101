@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <style>
+        body{
+            display: grid;
+            font-size: 20px;
+            font-family: sans-serif;
+        }
+        .container{
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .header{
+            padding-top: 20px;
+            margin-left: 15px;
+        }
+        .product_detail, .in_or_out_of_stock{
+            display: flex;
+        }
+        .product_pic{
+            height: 350px;
+            width: 300px;
+            border: 1px solid black;
+        }
+        .text_insite_pic{
+            display: grid;
+            justify-content: center;
+            padding-top: 50%;
+        }
+        .details_of_product{
+            margin-left: 50px;
+        }
+        .in_stock, .out_of_stock{
+            color: red;
+        }
+        .in_stock{
+            margin-right: 10px;
+        }
+        .out_of_stock{
+            margin-left: 10px;   
+        }
+        #quantityLabel{
+            margin-right: 20px;
+        }
+        #quantity{
+            width: 30%;
+            padding-block: 10px
+        }
+        button{
+            margin-left: 15px;
+            padding: 10px;
+            padding-left: 30%;
+            padding-right: 30%;
+            background-color: white;
+            border-color: gray;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Toy name</h1>
+        </div>
+        <div class="product_detail">
+            <div class="product_pic">
+                <div class="text_insite_pic">Toy picture</div>
+            </div>
+            <div class="details_of_product">  
+                <div class="brand">Brand</div><br>
+                <div class="gender">Gender</div><br>
+                <div class="age">Age</div><br>
+                <div class="price">Price</div><br>
+                <div class="shipping_method">Shipping Method: Cash on Delivery</div><br>
+                <div class="in_or_out_of_stock">
+                    <div class="in_stock"><b>In Stock</b></div>
+                    <div>/</div>
+                    <div class="out_of_stock"><b>Out of Stock</b></div><br>
+                </div><br>
+                <div class="dropdown_quantity">
+                    <label for="quantity" id="quantityLabel">Quantity</label>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div><br>
+                <button>Add to cart</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
