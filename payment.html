@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            font-size: 20px;
+        }
+        .container {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .header {
+            padding-top: 20px;
+            margin-left: 15px;
+        }
+        .summary_payment, #gender_and_age, .in_or_out_of_stock, .item_total, .item_value, .shipping_fee, .shipping_fee_value, .order_total, .order_total_value, .button_place_your_order{
+            display: flex;
+        }
+        table, th, tr, td {
+            border: 1.5px solid black;
+        }
+        table {
+            border-collapse: collapse;
+            width: 70%;
+        }
+        th, td {
+            padding: 15px;
+        }
+        hr{
+            margin-left: 25px;
+            border: 1.5px solid green;
+        }
+        #Items{
+            text-align: left;
+        }
+        .table_data_2{
+            width: 15%;
+        }
+        .table_data_2,.table_data_3, #Price{
+            text-align: right;
+        }
+        .table_data_3{
+            width: 20%;
+        }
+        #age{
+            margin-left: 50px;
+        }
+        .in_stock, .out_of_stock{
+            color: red;
+        }
+        .in_stock{
+            margin-right: 10px;
+        }
+        .out_of_stock{
+            margin-left: 10px;   
+        }
+        #quantity_value, #quantity_price{
+            margin-top: -55px;
+        }
+        .order_summary{
+            padding-left: 5%;
+            font-size: 27px;
+        }
+        .item_total{
+            padding-bottom: 10px;
+        }
+        .item_total, .shipping_fee, .order_total{
+            padding-left: 30px
+        }
+        .item_value, .shipping_fee_value{
+            padding-left: 10px;
+        }
+        .button_place_your_order{
+            padding-top: 100px;
+            margin-left: 70%;
+            margin-right: -70%;
+        }
+        button{
+            padding-bottom: 15px;
+            padding-top: 15px;
+            width: 30%;
+            background-color: white;
+            border-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Payment Methods</h1>
+        </div>
+        <div class="summary_payment">
+            <table>
+                <tr>
+                    <th id="Items">Items</th>
+                    <th id="Quantity">Quantity</th>
+                    <th id="Price">Price (THB)</th>
+                </tr>
+                <tr>
+                    <td class="table_data_1">
+                        <div class="details_item">
+                            <div><b>Toy Name</b> by Brand</div><br>
+                            <div id="gender_and_age">
+                                <div id="gender">Gender</div>
+                                <div id="age">Age</div>
+                            </div><br>
+                            <div class="in_or_out_of_stock">
+                                <div class="in_stock"><b>In Stock</b></div>
+                                <div>/</div>
+                                <div class="out_of_stock"><b>Out of Stock</b></div><br>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="table_data_2">
+                        <div class="dropdown_quantity">
+                            <div class="quantity">
+                                <p id="quantity_value">1</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="table_data_3">
+                        <p id="quantity_price">100.00</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table_data_1">
+                        <div class="details_item">
+                            <div><b>Toy Name</b> by Brand</div><br>
+                            <div id="gender_and_age">
+                                <div id="gender">Gender</div>
+                                <div id="age">Age</div>
+                            </div><br>
+                            <div class="in_or_out_of_stock">
+                                <div class="in_stock"><b>In Stock</b></div>
+                                <div>/</div>
+                                <div class="out_of_stock"><b>Out of Stock</b></div><br>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="table_data_2">
+                        <div class="dropdown_quantity">
+                            <div class="quantity">
+                                <p id="quantity_value" >1</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="table_data_3">
+                        <p id="quantity_price">100.00</p>
+                    </td>
+                </tr>
+            </table>
+            <div class="order_summary">
+                <p><b>Order Summary</b></p>
+                <div class="item_total">
+                    <div class="item_description">Items(2):</div>
+                    <div>
+                        <div class="item_value">
+                            <div style="color: #B80707;">200.00</div>
+                            <div style="margin-left: 5px;">THB</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="shipping_fee">
+                    <div class="shipping_fee_description">Shipping Fee:</div>
+                    <div>
+                        <div class="shipping_fee_value">
+                            <div style="color: #B80707;">150.00</div>
+                            <div style="margin-left: 5px;">THB</div>
+                        </div>
+                    </div>
+                </div><hr>
+                <div class="order_total">
+                    <div class="order_total_text"><b>Order_Total:</b></div>
+                    <div>
+                        <div class="order_total_value">
+                            <div style="color: #B80707;"><b>200.00</b></div>
+                            <div style="margin-left: 5px;"><b>THB</b></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="shipping_method">
+            <p id="shipping_method_text">Shipping Method: Kerry Expres</p>
+        </div><br>
+        <div class="select_payment_method">
+            <div class="select_payment">
+                <h4>Select Payment Methods</h4>
+                <div class="credit_debit_cards">
+                    <input type="radio" name="Payment Methods" id="credit_debit_cards">
+                    <label for="credit_debit_cards">Credit or Dabit Cards</label>
+                </div><br>
+                <div class="paypal">
+                    <input type="radio" name="Payment Methods" id="paypal">
+                    <label for="paypal">Paypal</label>
+                </div><br>
+                <div class="line_pay">
+                    <input type="radio" name="Payment Methods" id="line_pay">
+                    <label for="line_pay">Line Pay</label>
+                </div>
+            </div>
+        </div>
+        <div class="button_place_your_order">
+            <button>Place your order</button>
+        </div>
+    </div>
+</body>
+</html>
