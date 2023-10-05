@@ -1,0 +1,1 @@
+Commit massages : __[Added, Updated, Edited, Deleted]: ระบุสิ่งที่สร้างหรือเพิ่มหรือแก้หรือลบ__
