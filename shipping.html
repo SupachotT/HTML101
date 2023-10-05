@@ -4,6 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shipping</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            font-size: 20px;
+        }
+        .container {
+            padding-left: 20px;
+        }
+        .container, .city, .province{
+            padding-right: 20px;
+        }
+        .header {
+            padding-top: 20px;
+            margin-left: 15px;
+        }
+        .full_name, .address1, .address2, .more_address{
+            padding-top: 30px;
+        }
+        #full_name, #address1, #address2, #city, #province, #post_code{
+            width: 100%;
+            padding-block: 10px;
+        }
+        .more_address, .button_deliver{
+            display: flex;
+        }
+        .city, .province, .post_code{
+            width: 40%;
+        }
+        .button_deliver{
+            justify-content: center;
+            padding-top: 100px;
+        }
+        button{
+            padding-bottom: 15px;
+            padding-top: 15px;
+            width: 30%;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -11,34 +49,34 @@
             <h1>Shipping Address</h1>
         </div>
         <div class="form_address">
-            <div>
+            <div class="full_name">
                 <label for="full_name">Full name</label><br>
                 <input type="text" name="Full_name" id="full_name">
             </div>
-            <div>
+            <div class="address1">
                 <label for="address1">Address 1</label><br>
                 <input type="text" name="Address1" id="address1">
             </div>
-            <div>
+            <div class="address2">
                 <label for="address2">Address 2</label><br>
-                <input type="text" name="Address2" id="Address2">
+                <input type="text" name="Address2" id="address2">
             </div>
-            <div style="display: flex;">
-                <div>
+            <div class="more_address">
+                <div class="city">
                     <label for="city">City</label><br>
                     <input type="text" name="City" id="city">
                 </div>
-                <div>
+                <div class="province">
                     <label for="province">Province</label><br>
                     <input type="text" name="Province" id="province">
                 </div>
-                <div>
+                <div class="post_code">
                     <label for="post_code">Post code</label><br>
                     <input type="text" name="Post_code" id="post_code">
                 </div> 
             </div>
-            <div>
-                <button>Diliver to this address</button>
+            <div class="button_deliver">
+                <button>Deliver to this address</button>
             </div>
         </div>
     </div>
