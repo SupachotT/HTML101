@@ -18,7 +18,7 @@
             padding-top: 20px;
             margin-left: 15px;
         }
-        .form, #gender_and_age, .in_or_out_of_stock, .summary, .shipping_fee, .subtotal, .subtotal_value, .shipping_fee_value {
+        .form, #gender_and_age, .in_or_out_of_stock, .summary, .shipping_fee, .subtotal, .subtotal_value, .shipping_fee_value{
             display: flex;
         }
         table, th, tr, td {
@@ -53,7 +53,7 @@
         .in_stock, .out_of_stock{
             color: red;
         }
-        .in_stock{
+        .in_stock, .subtotal_description, .shipping_fee_description{
             margin-right: 10px;
         }
         .out_of_stock{
@@ -67,7 +67,6 @@
         }
         .dropdown_quantity{
             text-align: center;
-            margin-top: -85px;
         }
         button{
             margin-top: 30px;
@@ -78,27 +77,23 @@
             border-color: gray;
             font-size: 13px;
         }
-        p{
+        p, .dropdown_quantity{
             margin-top: -85px;
         }
         .summary{
             justify-content: space-between;
         }
+        .shipping_method, .shipping_fee, .shipping_fee_informaiton{
+            justify-content: flex-start;
+        }
         .shipping_method{
             padding-bottom: 10px;
         }
+        .subtotal, .shipping_fee{
+            justify-content: flex-end;
+        }
         .subtotal{
-            justify-content: flex-end;
             margin-bottom: 10px;
-        }
-        .subtotal_description{
-            margin-right: 10px;
-        }
-        .shipping_fee{
-            justify-content: flex-end;
-        }
-        .shipping_fee_description{
-            margin-right: 10px;
         }
     </style>
 </head>
@@ -191,16 +186,16 @@
         </div><br>
 
         <div class="summary">
-            <div>
+            <div class="shipping_value">
                 <div class="shipping_method">Shipping Method: Kerry Express</div>
-                <div class="shipping_fee">Shipping fee: 150.00 THB</div>
+                <div class="shipping_fee_informaiton">Shipping fee: 150.00 THB</div>
             </div>
             <div>
                 <div class="subtotal">
                     <div class="subtotal_description"><b>Subtotal (2 Items):</b></div>
                     <div>
                         <div class="subtotal_value">
-                            <div style="color: red;"><b>200.00</b></div>
+                            <div style="color: #B80707;"><b>200.00</b></div>
                             <div style="margin-left: 5px;"><b>THB</b></div>
                         </div>
                     </div>
@@ -209,7 +204,7 @@
                     <div class="shipping_fee_description"><b>Shipping fee:</b></div>
                     <div>
                         <div class="shipping_fee_value">
-                            <div style="color: red;"><b>150.00</b></div>
+                            <div style="color: #B80707;"><b>150.00</b></div>
                             <div style="margin-left: 5px;"><b>THB</b></div>
                         </div>
                     </div>
